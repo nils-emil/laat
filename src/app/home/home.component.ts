@@ -10,6 +10,11 @@ export class HomeComponent {
 
   constructor(private router: Router) {}
 
+  public scrollTop() {
+    this.router.navigate(['']);
+    window.scroll({ top: 0, behavior:  'smooth'});
+  }
+
   public navigateToEmailpage() {
     this.router.navigate(['about']);
   }
