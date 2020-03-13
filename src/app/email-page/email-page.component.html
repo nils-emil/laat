@@ -1,0 +1,45 @@
+<div class="header-container">
+  <h1 class="header-logo">
+    LAAT
+  </h1>
+</div>
+<div class="header-container mt-0">
+  <hr>
+</div>
+<div style="padding-top: 10rem">
+  <div>
+    <div class="flex-row-container mt-0">
+      <div class="col-12 flex-center">
+        <img class="col-12" src="../../assets/two-guys-building-robocop.svg"
+             alt="Kiwi standing on oval">
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="flex-row-container pb-10 mt-0">
+      <div class="col-12">
+        <h1 style="text-align: center">
+          LAAT will be ready soon!
+        </h1>
+        <p *ngIf="!showSuccessMessage" style="text-align: center">
+          LAAT is currently under maintainace but please leave us your email for an update!
+        </p>
+
+        <p *ngIf="showSuccessMessage" style="text-align: center" class="success-message">
+          We have received your email and we will notify when LAAT is ready
+        </p>
+        <form (ngSubmit)="sendEmail()">
+          <div *ngIf="!showSuccessMessage" class="flex-center" style="margin-bottom: 3rem">
+            <input autocomplete="off" name="email" [(ngModel)]="email" type="email" value=""/>
+          </div>
+          <div class="col-12 relative flex-center">
+            <button *ngIf="!showSuccessMessage" type="submit" class="btn" style="padding-left: 4rem; padding-right: 4rem">
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+

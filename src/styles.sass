@@ -1,1 +1,189 @@
 /* You can add global styles to this file, and also import other style files */
+*
+  box-sizing: border-box
+  font-family: Raleway, serif
+
+body
+  margin: 0
+  overflow: hidden
+  overflow-y: scroll
+
+.flex-row-container
+  display: flex
+  flex-direction: row
+  align-items: center
+  width: 100%
+
+.header-container
+  padding-left: 25rem
+  padding-right: 25rem
+
+@media only screen and (min-width: 900px)
+  .flex-row-container
+    padding-left: 10rem
+    padding-right: 10rem
+  .header-container
+    padding-left: 10rem
+    padding-right: 10rem
+
+@media only screen and (min-width: 1650px)
+  .flex-row-container
+    padding-left: 25rem
+    padding-right: 25rem
+  .header-container
+    padding-left: 25rem
+    padding-right: 25rem
+
+@media only screen and (max-width: 900px)
+  .flex-row-container
+    padding-left: 5rem
+    padding-right: 5rem
+  .header-container
+    padding-left: 5rem
+    padding-right: 5rem
+
+@media only screen and (max-width: 400px)
+  .flex-row-container
+    padding-left: 1rem
+    padding-right: 1rem
+  .header-container
+    padding-left: 1rem
+    padding-right: 1rem
+
+@media only screen and (min-width: 1250px)
+  .pl-4
+    padding-left: 4rem
+  .pr-4
+    padding-right: 4rem
+
+.container
+  position: relative
+  width: 98vw
+  animation-name: slideInFromLeft
+  animation-delay: 0s
+  animation-duration: 1s
+
+@media only screen and (min-width: 1250px)
+  .container
+    position: relative
+    width: 98vw
+    min-height: 100vh
+.background-light-gray
+  background-color: #F9F9F9
+
+@media only screen and (min-width: 1250px)
+  .container
+    display: flex
+    justify-content: center
+
+
+@media only screen and (max-width: 1400px)
+  .flex-row-container
+    flex-direction: column
+
+  .flex-direction-column-reverse-sm
+    flex-direction: column-reverse
+
+.m-10
+  margin-top: 10rem
+  margin-bottom: 10rem
+.pb-10
+  padding-bottom: 10rem
+
+@for $i from 1 through 12
+  .col-#{$i}
+    width: 100% / 12 * $i
+
+@media only screen and (max-width: 1250px)
+  @for $i from 1 through 12
+    .col-sm-#{$i}
+      width: 100% / 12 * $i
+      padding-top: 1rem
+      padding-bottom: 1rem
+.flex-center-sm
+  display: flex
+
+.btn
+  background-color: #16161D
+  border: none
+  color: white
+  padding: 8px 32px
+  text-align: center
+  text-decoration: none
+  font-weight: 500
+  display: inline-block
+  font-size: 1rem
+  border-radius: 10px
+  cursor: pointer
+  transition: all .2s ease-in-out
+
+.btn:hover
+  transform: scale(1.1)
+
+h1
+  font-size: 3rem
+  font-style: normal
+  line-height: 4rem
+  font-weight: 600
+
+p
+  font-size: .9rem
+  line-height: 2
+
+img
+  max-width: 40rem
+
+.relative
+  position: relative
+
+.mt-0
+  margin-top: 0 !important
+@media only screen and (max-width: 1250px)
+  .flex-center-sm
+    display: flex
+    justify-content: center
+  p
+    text-align: center
+  .col-6 > h1
+    text-align: center
+.flex-center
+  display: flex
+  justify-content: center
+hr
+  width: 100%
+
+@media only screen and (max-width: 1250px)
+  hr
+    margin-bottom: 0
+
+.header
+  &-container
+    display: flex
+    margin-top: .5rem
+    justify-content: space-between
+
+  &-logo
+    font-family: Space Mono, serif
+    font-style: normal
+    font-size: 2rem
+    left: 0
+    margin: 0
+    line-height: 1
+
+  &-btn
+    right: 0
+    @media only screen and (max-width: 300px)
+      display: none
+
+@media only screen and (max-width: 900px)
+
+  h1
+    font-size: 2rem
+    line-height: 1
+
+@keyframes slideInFromLeft
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
